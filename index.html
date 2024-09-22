@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World App</title>
+    <link rel="stylesheet" href="iui/iui.css" type="text/css" />
+    <link rel="stylesheet" href="iui/t/default/default-theme.css" type="text/css" />
+    <script type="application/x-javascript" src="iui/iui.js"></script>
+
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        #chatMessages {
+            background-color: #E5E5E5;
+            min-height: 200px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .message {
+            max-width: 70%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            clear: both;
+            word-wrap: break-word;
+        }
+
+        .sent {
+            float: right;
+            background: -webkit-gradient(linear, left top, left bottom, from(#00ADEE), to(#0078A5));
+            color: white;
+        }
+
+        #inputArea {
+            padding: 10px;
+            background-color: #F5F5F5;
+            border-top: 1px solid #C8C8C8;
+        }
+
+        #messageInput {
+            width: 75%;
+            padding: 5px;
+            border: 1px solid #C8C8C8;
+            border-radius: 10px;
+        }
+
+        #sendButton {
+            width: 20%;
+            padding: 5px;
+            background: -webkit-gradient(linear, left top, left bottom, from(#4B94CE), to(#2A6AB3));
+            border: 1px solid #29447E;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar">
+        <h1 id="pageTitle"></h1>
+        <a id="backButton" class="button" href="#"></a>
+    </div>
+
+    <ul id="home" title="My iUI App" selected="true">
+        <li><a href="#about">About</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div id="about" title="About">
+        <h2>About This App</h2>
+        <p>This is a sample iUI-based app demonstrating basic functionality.</p>
+        <ul>
+            <li><a href="#features">Features</a></li>
+        </ul>
+    </div>
+
+    <div id="features" title="Features">
+        <ul>
+            <li>Easy navigation</li>
+            <li>Mobile-friendly design</li>
+            <li>Lightweight framework</li>
+        </ul>
+    </div>
+
+    <form id="settings" title="Settings" class="panel">
+        <h2>App Settings</h2>
+        <fieldset>
+            <div class="row">
+                <label>Theme</label>
+                <select>
+                    <option>Default</option>
+                    <option>Dark</option>
+                    <option>Light</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Notifications</label>
+                <div class="toggle" onclick=""><span class="thumb"></span><span class="toggleOn">ON</span><span
+                        class="toggleOff">OFF</span></div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form id="contact" title="Contact Us" class="panel" action="#">
+        <fieldset>
+            <div class="row">
+                <label>Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="row">
+                <label>Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="row">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+            </div>
+        </fieldset>
+        <a class="whiteButton" type="submit">Send</a>
+    </form>
+</body>
+
+
+</html>
